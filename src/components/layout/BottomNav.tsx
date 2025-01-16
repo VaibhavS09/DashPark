@@ -4,7 +4,8 @@ import {
   CalendarDays,
   BellRing,
   WalletCards,
-  UserCircle
+  UserCircle,
+  Settings2
 } from 'lucide-react';
 
 interface BottomNavProps {
@@ -19,6 +20,7 @@ export function BottomNav({ currentPage, onNavigate }: BottomNavProps) {
     { icon: BellRing, label: 'Bookings', id: 'bookings' },
     { icon: WalletCards, label: 'Wallet', id: 'wallet' },
     { icon: UserCircle, label: 'Profile', id: 'profile' },
+    { icon: Settings2, label: 'Settings', id: 'settings' },
   ];
 
   return (

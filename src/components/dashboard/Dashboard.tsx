@@ -11,9 +11,14 @@ import {
   Coins,
   BarChart2,
   Timer,
-  Medal
+  Medal,
+  HandCoins
 } from 'lucide-react';
 import { Booking, Provider } from '../../types';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoins } from '@fortawesome/free-solid-svg-icons';
+
+
 
 interface DashboardProps {
   provider: Provider;
@@ -41,7 +46,7 @@ export function Dashboard({ provider, bookings }: DashboardProps) {
     {
       title: 'Total Earnings',
       value: `₹${provider.walletBalance.toFixed(2)}`,
-      icon: Coins,
+      icon: HandCoins,
       change: '+18.7%',
       color: 'bg-primary-500',
     },

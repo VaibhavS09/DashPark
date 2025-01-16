@@ -17,9 +17,9 @@ export function Profile({ provider, onUpdateProfile }: ProfileProps) {
     bio: 'Professional service provider with over 5 years of experience.',
     specialties: ['Consultation', 'Advisory', 'Planning'],
     qualifications: ['Certified Professional', 'Industry Expert'],
-    languages: ['English', 'Spanish'],
+    languages: ['English', 'Hindi'],
     experience: '5+ years',
-    rate: '$75/hour',
+    rate: '₹75/hour',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -33,16 +33,16 @@ export function Profile({ provider, onUpdateProfile }: ProfileProps) {
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow">
         {/* Profile Header */}
         <div className="relative">
-          <div className="h-32 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-t-lg"></div>
-          <div className="absolute -bottom-16 left-6">
+          <div className="h-32 bg-primary-500 rounded-t-lg"></div>
+          <div className="absolute -bottom-2 left-6">
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                src="https://th.bing.com/th/id/R.2304125dc9f12942ea152e7616634c2b?rik=9LS9NSSadpjOvQ&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2fdcr%2f65o%2fdcr65oGKi.jpg&ehk=L69OmmgwMtnNxYw1Z0no9NqTDxc%2bmSjSuEBH4xWqqDY%3d&risl=&pid=ImgRaw&r=0"
                 alt="Profile"
                 className="w-32 h-32 rounded-full border-4 border-white dark:border-gray-700"
               />
               {isEditing && (
-                <button className="absolute bottom-0 right-0 p-2 bg-indigo-600 rounded-full text-white">
+                <button className="absolute bottom-0 right-0 p-2 bg-yellow-600 rounded-full text-white">
                   <Camera className="h-5 w-5" />
                 </button>
               )}
@@ -60,7 +60,7 @@ export function Profile({ provider, onUpdateProfile }: ProfileProps) {
             </div>
             <button
               onClick={() => setIsEditing(!isEditing)}
-              className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+              className="px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-700"
             >
               {isEditing ? 'Cancel' : 'Edit Profile'}
             </button>
@@ -75,7 +75,7 @@ export function Profile({ provider, onUpdateProfile }: ProfileProps) {
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-yellow-500 focus:ring-yellow-500"
                   />
                 </div>
                 <div>
@@ -120,7 +120,7 @@ export function Profile({ provider, onUpdateProfile }: ProfileProps) {
               <div className="flex justify-end">
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+                  className="px-4 py-2 bg-yellow-600 text-white rounded-md hover:bg-yellow -700"
                 >
                   Save Changes
                 </button>
@@ -171,7 +171,7 @@ export function Profile({ provider, onUpdateProfile }: ProfileProps) {
                     {formData.specialties.map((specialty, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm"
+                        className="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-black-800 dark:text-yellow-200 rounded-full text-sm"
                       >
                         {specialty}
                       </span>
@@ -184,7 +184,7 @@ export function Profile({ provider, onUpdateProfile }: ProfileProps) {
                     {formData.languages.map((language, index) => (
                       <span
                         key={index}
-                        className="flex items-center space-x-1 px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm"
+                        className="flex items-center space-x-1 px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-black-800 dark:text-yellow-200 rounded-full text-sm"
                       >
                         <Globe className="h-4 w-4" />
                         <span>{language}</span>
@@ -197,7 +197,7 @@ export function Profile({ provider, onUpdateProfile }: ProfileProps) {
                   <div className="space-y-2">
                     {formData.qualifications.map((qualification, index) => (
                       <div key={index} className="flex items-center space-x-2">
-                        <Award className="h-5 w-5 text-indigo-600" />
+                        <Award className="h-5 w-5 text-yellow-600" />
                         <span className="text-gray-900 dark:text-white">{qualification}</span>
                       </div>
                     ))}

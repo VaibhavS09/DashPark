@@ -10,6 +10,8 @@ import {
   History
 } from 'lucide-react';
 import { Transaction } from '../../types';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faIndianRupeeSign, faWallet } from '@fortawesome/free-solid-svg-icons';
 
 interface WalletProps {
   balance: number;
@@ -23,7 +25,8 @@ export function Wallet({ balance, transactions, onRequestPayout }: WalletProps) 
       <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
-            <WalletCards className="h-7 w-7 text-primary-500 mr-3" />
+            {/* <WalletCards className="h-7 w-7 text-primary-500 mr-3" /> */}
+            <FontAwesomeIcon icon={faWallet} className="h-7 w-7 text-primary-500 mr-3"/>
             Wallet
           </h2>
         </div>
@@ -48,7 +51,8 @@ export function Wallet({ balance, transactions, onRequestPayout }: WalletProps) 
           {/* Quick Stats */}
           <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-100 dark:border-gray-700">
             <div className="flex items-center mb-4">
-              <Receipt className="h-5 w-5 text-primary-500 mr-2" />
+              {/* <Receipt className="h-5 w-5 text-primary-500 mr-2" /> */}
+              <FontAwesomeIcon icon={faIndianRupeeSign} className='mr-2 text-gray-900 dark:text-white'/>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Quick Stats</h3>
             </div>
             <div className="grid grid-cols-2 gap-4">

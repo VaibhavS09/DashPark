@@ -174,7 +174,7 @@ export function BookingManagement({ bookings, onAcceptBooking, onRejectBooking }
                     </div>
                     <div className="text-right">
                       <p className="text-lg font-medium text-gray-900 dark:text-white">
-                        ${booking.price.toFixed(2)}
+                      ₹{booking.price.toFixed(2)}
                       </p>
                       <p className={`text-sm font-medium ${getStatusColor(booking.status)}`}>
                         {booking.status.charAt(0).toUpperCase() + booking.status.slice(1)}
